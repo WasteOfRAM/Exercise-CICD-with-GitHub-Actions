@@ -24,27 +24,7 @@ jobs:
       run: npx playwright install
     - name: Start server
       run: node ./server/server.js &
-
-  # start-server:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #   - name: Start server
-  #     run: node ./server/server.js
-
-  # start-app:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #   - name: Start App
-  #     run: npm start
-
-  # tests:
-  #   needs: [build, start-server, start-app]
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #   - name: Run tests
-  #     run: npm run testUi
+    - name: Start App
+      run: npm start &
+    - name: Run tests
+      run: npm run testUi
