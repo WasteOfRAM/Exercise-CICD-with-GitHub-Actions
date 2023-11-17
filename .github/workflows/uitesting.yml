@@ -18,6 +18,8 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
+    - name: Install Playwrigth
+      run: npx playwright install
     - name: Build App
       run: npm ci
     - name: Tests
