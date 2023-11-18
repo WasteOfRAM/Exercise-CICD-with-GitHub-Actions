@@ -2,9 +2,9 @@ name: Deploy
 
 on:
   workflow_run:
-    workflows: ["UI_Tests"]
+    workflows: ["UI Tests"]
     types:
-      - complited
+      - completed
 
 jobs:
   deploy:
